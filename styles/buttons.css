@@ -1,0 +1,67 @@
+.btn {
+  @apply cursor-pointer block overflow-hidden rounded-full;
+}
+.btn:focus {
+  @apply outline-none;
+}
+.btn:active {
+  @apply outline-none;
+}
+
+.btn-primary {
+  @apply bg-accent-blue text-secondary-white;
+}
+.btn-primary:hover {
+  @apply brightness-125;
+}
+.btn-primary:active {
+  @apply brightness-150;
+}
+
+.btn-pink {
+  @apply bg-accent-light-pink text-secondary-white;
+}
+.btn-pink:hover {
+  @apply brightness-125;
+}
+.btn-pink:active {
+  @apply brightness-150;
+}
+
+.btn-gray {
+  @apply bg-secondary-blue;
+}
+.btn-gray:hover {
+  @apply brightness-95;
+}
+.btn-gray:active {
+  @apply brightness-90;
+}
+
+.btn-white {
+  @apply bg-secondary-white;
+}
+.btn-white:hover {
+  @apply bg-secondary-blue;
+}
+.btn-white:active {
+  @apply bg-secondary-blue brightness-90;
+}
+
+.btn-disabled,
+.btn:disabled,
+.btn-disabled:hover,
+.btn:disabled:hover,
+.btn-disabled:focus,
+.btn:disabled:focus {
+  @apply bg-none bg-gray-100 text-gray-300 shadow-inner cursor-not-allowed border-gray-300 brightness-100;
+  box-shadow: none !important;
+}
+
+.btn-loading {
+  @apply text-opacity-0 !important;
+}
+
+.btn-selected {
+  @apply font-bold text-gray-600 cursor-default select-none;
+}

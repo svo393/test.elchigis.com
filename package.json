@@ -1,0 +1,63 @@
+{
+  "dependencies": {
+    "@headlessui/react": "^1.4.0",
+    "@heroicons/react": "^1.0.4",
+    "@hookform/resolvers": "^2.8.0",
+    "@reduxjs/toolkit": "1.6.1",
+    "axios": "^0.21.1",
+    "clsx": "1.1.1",
+    "dayjs": "^1.10.6",
+    "focus-trap-react": "^8.7.1",
+    "keen-slider": "^5.5.1",
+    "nanoid": "^3.1.25",
+    "next": "^11.1.0",
+    "next-redux-wrapper": "6.0.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-error-boundary": "3.1.3",
+    "react-hook-form": "7.12.2",
+    "react-redux": "7.2.4",
+    "redux": "4.1.1",
+    "redux-orm": "^0.16.2",
+    "zod": "3.7.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.2.1",
+    "@tailwindcss/line-clamp": "^0.2.1",
+    "@types/node": "^16.7.1",
+    "@types/prettier": "^2.3.2",
+    "@types/react": "^17.0.19",
+    "@types/react-redux": "^7.1.18",
+    "@types/redux-orm": "^0.16.0",
+    "@types/tailwindcss": "^2.2.1",
+    "@typescript-eslint/eslint-plugin": "^4.29.2",
+    "@typescript-eslint/parser": "^4.29.2",
+    "autoprefixer": "^10.3.1",
+    "eslint": "^7.32.0",
+    "eslint-config-next": "^11.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.1",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.3.6",
+    "prettier": "^2.3.2",
+    "tailwindcss": "^2.2.7",
+    "typescript": "^4.4.1-rc"
+  },
+  "engines": {
+    "node": ">=14.16.0"
+  },
+  "name": "test.elchigis.com",
+  "private": true,
+  "scripts": {
+    "build": "NODE_ENV=production next build",
+    "dev": "NODE_ENV=development next dev",
+    "start": "NODE_ENV=production next start",
+    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|jsx|ts|tsx|css|html|json)\"",
+    "lint": "next lint && eslint --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx .",
+    "validate": "yarn format && npm-run-all --parallel lint build"
+  }
+}

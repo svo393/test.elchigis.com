@@ -1,0 +1,12 @@
+.form-input {
+  @apply placeholder-primary-body border border-secondary-blue rounded-full focus:outline-none focus:ring-1 focus:ring-accent-blue;
+}
+
+.form-disabled,
+.form-input:disabled {
+  @apply cursor-not-allowed bg-gray-200 text-gray-400 border-gray-300 shadow-none focus:ring-0;
+}
+
+.form-error {
+  @apply border-red-600 ring ring-red-300 ring-opacity-50;
+}
