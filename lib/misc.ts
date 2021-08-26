@@ -80,7 +80,7 @@ export let parseQueryString = (
     queryParams,
     isNonEmptyString(queryFilters) ? `filter={${queryFilters}}` : '',
   ]
-    .filter((a) => isNonEmptyString(a))
+    .filter(isNonEmptyString)
     .join('&')
 
   return isNonEmptyString(queryString) ? `?${queryString}` : ''
