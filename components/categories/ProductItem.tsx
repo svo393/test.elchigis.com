@@ -135,7 +135,7 @@ let ProductItem = ({
   )
 
   let src = isPresent(images?.[0]?.image_url)
-    ? `${MEDIA_URL}/${images?.[0]?.image_url}`
+    ? `${MEDIA_URL}${images?.[0]?.image_url}`
     : BLUR_DATA_URL
 
   let loading = useMemo(

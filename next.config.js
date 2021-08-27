@@ -9,6 +9,7 @@ module.exports = {
     NEXT_PUBLIC_MEDIA_URL: process.env.NEXT_PUBLIC_MEDIA_URL,
     NEXT_PUBLIC_APP_ORIGIN: process.env.NEXT_PUBLIC_APP_ORIGIN,
   },
+  images: { domains: ['test2.sionic.ru'] },
   async headers() {
     return [
       {

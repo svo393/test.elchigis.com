@@ -51,7 +51,7 @@ let HeroImage = ({ product }: Props) => {
   }, [ref])
 
   let src = isPresent(images?.[selectedImageIdx]?.image_url)
-    ? `${MEDIA_URL}/${images?.[selectedImageIdx]?.image_url}`
+    ? `${MEDIA_URL}${images?.[selectedImageIdx]?.image_url}`
     : BLUR_DATA_URL
 
   return (
