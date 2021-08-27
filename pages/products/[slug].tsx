@@ -62,7 +62,9 @@ let ProductPage: Page<FromInitialProps> = ({
   )
 
   let [getCategory] = useQuery(categoriesActions.getCategory)
-  let [getProduct] = useQuery(productActions.getProduct)
+  let [getProduct, getProductStatus] = useQuery(
+    productActions.getProduct
+  )
   let [getProductImages] = useQuery(
     productImageActions.getProductImages
   )
@@ -183,7 +185,10 @@ let ProductPage: Page<FromInitialProps> = ({
         )}
 
         <div className='mt-6 sm:mt-3 flex space-x-9 sm:space-x-0 sm:block'>
-          <HeroImage product={product} />
+          <HeroImage
+            product={product}
+            loading={getProductStatus === 'loading'}
+          />
 
           <div className='sm:mt-6'>
             <div className='flex space-x-9 xl:space-x-6 lg:flex-col lg:space-x-0 sm:space-x-0 lg:max-w-xs sm:max-w-none'>

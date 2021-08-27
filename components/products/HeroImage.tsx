@@ -4,13 +4,13 @@ import { BLUR_DATA_URL, MEDIA_URL } from 'config/constants'
 import useIsomorphicLayoutEffect from 'hooks/useIsomorphicLayoutEffect'
 import 'keen-slider/keen-slider.min.css'
 import { useKeenSlider } from 'keen-slider/react'
-import { isNonEmptyArray, isPresent, lengthGt } from 'lib/utils'
+import { isAbsent, isNonEmptyArray, lengthGt } from 'lib/utils'
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 
-type Props = { product?: StoreFullProduct }
+type Props = { product?: StoreFullProduct; loading: boolean }
 
-let HeroImage = ({ product }: Props) => {
+let HeroImage = ({ product, loading }: Props) => {
   let images = product?.images
   let name = product?.name
 
@@ -50,9 +50,15 @@ let HeroImage = ({ product }: Props) => {
     }
   }, [ref])
 
-  let src = isPresent(images?.[selectedImageIdx]?.image_url)
-    ? `${MEDIA_URL}${images?.[selectedImageIdx]?.image_url}`
-    : BLUR_DATA_URL
+  let imageUrl = images?.[selectedImageIdx]?.image_url
+
+  let src = useMemo(
+    () =>
+      loading || isAbsent(imageUrl)
+        ? BLUR_DATA_URL
+        : `${MEDIA_URL}${imageUrl}`,
+    [loading, imageUrl]
+  )
 
   return (
     <>
