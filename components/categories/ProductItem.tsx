@@ -169,9 +169,9 @@ let ProductItem = ({
   )
 
   return (
-    <div className='w-52 lg:w-auto sm:w-auto hover:ring-1 hover:ring-accent-blue hover:ring-opacity-75 hover:shadow-lg rounded hover:ring-offset-8'>
+    <div className='hover:ring-1 hover:ring-accent-blue hover:ring-opacity-75 hover:shadow-lg rounded hover:ring-offset-8'>
       <ALink className='block pb-2.5' href={`/products/${id}`}>
-        <div className='relative w-52 lg:w-auto sm:w-auto h-32 lg:h-40 md:h-48 sm:h-52 overflow-hidden rounded'>
+        <div className='relative h-32 sm:h-40 xs:h-48 overflow-hidden rounded'>
           <Image
             objectFit='cover'
             layout='fill'

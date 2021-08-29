@@ -33,7 +33,7 @@ let HeaderSearchBar = () => {
   return (
     <FormProvider {...ctx}>
       <div
-        className='xs:order-2 mt-3 hidden xs:inline-block flex-shrink-0 w-6 h-6 text-primary-body'
+        className='xs:col-start-11 xs:col-span-2 xs:ml-auto xs:row-start-2 hidden xs:block w-5 h-5 text-primary-body'
         onClick={toggleOpen}
       >
         <SearchIcon />
@@ -41,7 +41,7 @@ let HeaderSearchBar = () => {
 
       <div
         className={clsx(
-          'sm:order-3 lg:order-1 lg:ml-0 lg:mt-2 xs:mt-3 relative ml-6 flex-grow sm:ml-0 sm:min-w-[16.5rem] md:min-w-[20rem] lg:min-w-[19rem] min-w-[16.5rem] max-w-xl lg:max-w-full',
+          'lg:ml-0 relative ml-6 flex-grow sm:ml-0 sm:min-w-[16.5rem] md:min-w-[20rem] lg:min-w-[19rem] min-w-[12.5rem] max-w-xl lg:max-w-full row-start-2 col-span-12 xs:row-start-3',
           { 'xs:hidden': !open }
         )}
       >

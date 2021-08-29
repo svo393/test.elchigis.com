@@ -140,7 +140,7 @@ let HomePage: Page<FromInitialProps> = ({
         </div>
 
         {isNonEmptyArray(products) ? (
-          <div className='grid mt-7 grid-auto-52 lg:grid-cols-2 xs:grid-cols-1 gap-y-10 gap-x-4'>
+          <div className='grid mt-7 grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 gap-y-10 gap-x-4'>
             {products.map((product) => (
               <ProductItem product={product} key={product.id} />
             ))}
